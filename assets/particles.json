@@ -1,0 +1,12 @@
+{"frames": {
+	"white":
+	{
+		"frame": {"x":392,"y":2,"w":128,"h":128},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+		"sourceSize": {"w":128,"h":128},
+		"pivot": {"x":0.5,"y":0.5}
+	}
+}
+}
