@@ -128,13 +128,13 @@ class Play extends Phaser.Scene {
         if(this.checkCollision(this.p1Rocket, this.ship03)) {
             this.p1Rocket.reset()
             this.shipExplode(this.ship03)
-            this.shippart(this.ship01); 
+            this.shippart(this.ship03); 
 
         }
         if (this.checkCollision(this.p1Rocket, this.ship02)) {
             this.p1Rocket.reset()
             this.shipExplode(this.ship02)
-            this.shippart(this.ship01); 
+            this.shippart(this.ship02); 
 
         }
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
@@ -146,7 +146,7 @@ class Play extends Phaser.Scene {
         if (this.checkCollision(this.p1Rocket, this.superspaceship01)) {
             this.p1Rocket.reset()
             this.shipExplode(this.superspaceship01)
-            this.shippart(this.ship01); 
+            this.shippart(this.superspaceship01); 
 
         }
     
@@ -202,13 +202,14 @@ class Play extends Phaser.Scene {
             frame: [ 'blue' ], // Change particle color to blue
             lifespan: 300, // Increase particle lifespan to 300 milliseconds
             speed: { min: 300, max: 500 }, // Adjust particle speed range
-            scale: { start: 1, end: 0.2 }, // Change particle scale properties
+            scale: { start: 1, end: 0.5 }, // Change particle scale properties
             gravityY: 200, // Adjust gravity
             blendMode: 'SCREEN', // Use a different blend mode, e.g., 'SCREEN'
             emitting: false
         });
-    
-        emitter.explode(20);
+
+        emitter.setPosition(ship.x, ship.y);
+        emitter.explode(100);
     }    
   
 

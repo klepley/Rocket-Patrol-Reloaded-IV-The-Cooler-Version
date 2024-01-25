@@ -6,7 +6,7 @@
 //New enemy spaceship (5) d
 //New title screem (3)
 //4 new explosion effects (3)
-//Particle Emiter (5)
+//Particle Emiter (5) d
 
 let config = {
     type: Phaser.AUTO,
