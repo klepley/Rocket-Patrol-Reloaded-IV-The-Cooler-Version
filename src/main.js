@@ -1,12 +1,20 @@
-//HS (1) d
-//Music (1) d
-//Fire UI (1) d
-//New background (1) d
-//Randomize movement (1) d
-//New enemy spaceship (5) d
-//New title screem (3)
-//4 new explosion effects (3)
-//Particle Emiter (5) d
+//Kaylie Lepley
+//Rocket Patrol Reloaded IV: The Cooler Version
+//Approx 14 hours
+
+//Mods:
+//Track a high score that persists across scenes and display it in the UI (1)
+//Implement the 'FIRE' UI text from the original game (1)
+//Add your own (copyright-free) looping background music to the Play scene (keep the volume low and be sure that multiple instances of your music don't play when the game restarts) (1)
+//Randomize each spaceship's movement direction at the start of each play (1)
+//Create a new scrolling tile sprite for the background (1)
+//Create 4 new explosion sound effects and randomize which one plays on impact (3)
+//Create a new title screen (e.g., new artwork, typography, layout) (3)
+//Create a new enemy Spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (5)
+//Use Phaser's particle emitter to create a particle explosion when the rocket hits the spaceship (5)
+
+
+
 
 let config = {
     type: Phaser.AUTO,

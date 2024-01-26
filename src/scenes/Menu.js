@@ -80,7 +80,7 @@ preload() {
           game.settings = {
             spaceshipSpeed: 3,
             superspaceshipspeed: 6,
-            gameTimer: 30000    
+            gameTimer: 60000   
           }
           this.sound.play('sfx-select')
           this.scene.start('playScene')    
@@ -90,7 +90,7 @@ preload() {
           game.settings = {
             spaceshipSpeed: 6,
             superspaceshipspeed: 8,
-            gameTimer: 25000    
+            gameTimer: 45000    
           }
           this.sound.play('sfx-select')
           this.scene.start('playScene')    
