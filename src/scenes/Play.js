@@ -9,6 +9,8 @@ class Play extends Phaser.Scene {
         //placing tile sprite
         this.newstarfield = this.add.tileSprite(0,0, 640, 480, 'newstarfield').setOrigin(0, 0)
 
+
+
         if (!this.musicPlaying) {
             this.spacemusic = this.sound.add('spacemusic', { loop: true, volume: 0.2 });
             this.spacemusic.play();
@@ -101,7 +103,8 @@ class Play extends Phaser.Scene {
             this.scene.start("menuScene")
         }
 
-        this.newstarfield.tilePositionX -= 4
+        //this.newstarfield.tilePositionX -= 4
+        this.newstarfield.tilePositionX += 6;
 
         if(!this.gameOver) {
             this.p1Rocket.update()

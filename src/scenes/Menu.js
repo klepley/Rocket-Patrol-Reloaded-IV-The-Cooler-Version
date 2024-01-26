@@ -9,6 +9,7 @@ preload() {
     this.load.image('rocket', './assets/rocket.png')
     this.load.image('spaceship', './assets/spaceship.png')
     this.load.image('superspaceship', './assets/superspaceship.png')
+    this.load.image('spaceback', './assets/spaceback.png')
     this.load.image('newstarfield', './assets/newstarfield.png')
     // load audio
     this.load.audio('spacemusic', './assets/spacemusic.wav')
@@ -37,6 +38,9 @@ preload() {
 }
 
     create() {
+    
+        this.spaceback = this.add.tileSprite(0,0, 640, 480, 'spaceback').setOrigin(0, 0)
+
         // animation configuration
         this.anims.create({
             key: 'explode',
@@ -45,13 +49,14 @@ preload() {
     })
 
 
+
         // display score
         let menuConfig = {
-            fontFamily: 'Courier',
-            fontSize: '28px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
-            align: 'right',
+            fontFamily: 'Impact',
+            fontSize: '35px',
+            backgroundColor: '#00FF00',
+            color: '#800080',
+            align: 'center',
             padding: {
             top: 5,
             bottom: 5,
@@ -60,8 +65,8 @@ preload() {
         }
         this.add.text(game.config.width/2, game.config.height/2 -borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5)
         this.add.text(game.config.width/2, game.config.height/2, 'Use <- -> arrows to move & (F) to fire', menuConfig).setOrigin(0.5)
-        menuConfig.backgroundColor = '#00FF00'
-        menuConfig.color = '#000'
+        menuConfig.backgroundColor = '#800080'
+        menuConfig.color = '#00FF00'
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5)
 
         // define keys
