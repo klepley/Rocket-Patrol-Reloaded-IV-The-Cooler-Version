@@ -15,10 +15,6 @@ class Play extends Phaser.Scene {
             this.musicPlaying = true;
         }
 
-        //play background music
-        //this.spacemusic = this.sound.add('spacemusic', { loop: true, volume: 0.2 });
-        //this.spacemusic.play();
-
         // green UI background
         this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0x00FF00).setOrigin(0, 0)
         // white borders
@@ -192,14 +188,18 @@ class Play extends Phaser.Scene {
         // score add and text update
         this.p1Score += ship.points
         this.scoreLeft.text = this.p1Score
-        
-        this.sound.play('sfx-explosion')
+        // Randomly select an explosion sound from an array of sound keys
+        const explosionSounds = ['sfx-explosion', 'sfx-explosion2', 'sfx-explosion3', 'sfx-explosion4' ,'sfx-explosion5'];
+        const randomExplosionSound = Phaser.Utils.Array.GetRandom(explosionSounds);
+        this.sound.play(randomExplosionSound);        
+
+        //this.sound.play('sfx-explosion')
 
     }
 
     shippart(ship) {
         const emitter = this.add.particles(ship.x, ship.y, 'particles', {
-            frame: [ 'blue' ], // Change particle color to blue
+            //frame: [ 'blue' ], // Change particle color to blue
             lifespan: 300, // Increase particle lifespan to 300 milliseconds
             speed: { min: 300, max: 500 }, // Adjust particle speed range
             scale: { start: 1, end: 0.5 }, // Change particle scale properties

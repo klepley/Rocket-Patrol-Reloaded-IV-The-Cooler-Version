@@ -15,6 +15,11 @@ preload() {
     this.load.audio('sfx-select', './assets/sfx-select.wav')
     this.load.audio('sfx-explosion', './assets/sfx-explosion.wav')
     this.load.audio('sfx-shot', './assets/sfx-shot.wav')
+    this.load.audio('sfx-explosion2', './assets/sfx-explosion2.wav')
+    this.load.audio('sfx-explosion3', './assets/sfx-explosion3.wav')
+    this.load.audio('sfx-explosion4', './assets/sfx-explosion4.wav')
+    this.load.audio('sfx-explosion5', './assets/sfx-explosion5.wav')
+
 
     this.load.spritesheet('particles', './assets/particles.png', {
         frameWidth: 64,
@@ -38,9 +43,6 @@ preload() {
             frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
             frameRate: 30
     })
-
-        //this.add.text(20, 20, "Rocket Patrol Menu")
-        //this.scene.start("playScene")
 
 
         // display score
@@ -73,7 +75,7 @@ preload() {
           game.settings = {
             spaceshipSpeed: 3,
             superspaceshipspeed: 6,
-            gameTimer: 20000    
+            gameTimer: 30000    
           }
           this.sound.play('sfx-select')
           this.scene.start('playScene')    
@@ -83,7 +85,7 @@ preload() {
           game.settings = {
             spaceshipSpeed: 6,
             superspaceshipspeed: 8,
-            gameTimer: 10000    
+            gameTimer: 25000    
           }
           this.sound.play('sfx-select')
           this.scene.start('playScene')    
